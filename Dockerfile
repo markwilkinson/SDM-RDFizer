@@ -1,6 +1,10 @@
 # Use an official Python runtime as a parent image
 FROM python:3.5
 
+RUN mkdir -p /data
+RUN mkdir -p /conf
+RUN mkdir -p /work
+
 # Set the working directory to /app
 WORKDIR /data
 

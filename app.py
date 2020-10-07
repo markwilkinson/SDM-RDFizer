@@ -8,6 +8,9 @@ app = Flask(__name__)
 def index():
     return "Welcome to the Rdf Graph Service"
 
+
+
+#  MARK:  TODO  - we want to POST a config file
 @app.route('/graph_creation/<path:config_file>', methods=['GET','POST'])
 def rdfgraph(config_file):
 	os.system("python3 /app/rdfizer/run_rdfizer.py /" + config_file)
